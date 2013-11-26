@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="public/components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="public/components/select2/select2.css"/>
+	<link type="text/css" rel="stylesheet" href="public/components/select2/select2-bootstrap.css"/>
+	<title>select2</title>
+</head>
+<body>
+	<br >
+	<br >
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li><a href="#multiple" data-toggle="tab">multiple</a></li>
+			<li><a href="#single" data-toggle="tab">single</a></li>
+		</ul>
+		<br >
+		<div class="tab-content">
+			<div class="tab-pane" id="multiple">
+				<p class="lead">Examples using select2 with multiple selections</p>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">input</div>
+							<div class="panel-body">
+								<h3>Editor</h3>
+								<input class="col-sm-10" 
+									data-bind="value: Selecteds, select2: { minimumInputLength: 2, query: QueryGrupo, multiple: true }" 
+									required="required" 
+									type="hidden" />
+
+								<div class="clearfix"></div>
+								<h3>Display</h3>
+								<input class="col-sm-10" 
+									data-bind="value: Selecteds, select2: { minimumInputLength: 2, query: QueryGrupo, multiple: true }" 
+									required="required" 
+									disabled="disabled"
+									type="hidden" />
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">select</div>
+							<div class="panel-body">
+								<p class="text-warning">'multiple' is not allowed for Select2 when attached to a &lt;select&gt; element. </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="tab-pane" id="single">
+				<p class="lead">Examples using select2 with single selection only</p>
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">input</div>
+							<div class="panel-body">
+								<h3>Editor</h3>
+								<input class="col-sm-10" 
+									data-bind="value: Selected, select2: { minimumInputLength: 2, query: QueryGrupo }" 
+									required="required" 
+									type="hidden" />
+
+								<div class="clearfix"></div>
+								<h3>Display</h3>
+								<input class="col-sm-10" 
+									data-bind="value: Selected, select2: { minimumInputLength: 2, query: QueryGrupo }" 
+									required="required" 
+									disabled="disabled"
+									type="hidden" />
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">select</div>
+							<div class="panel-body">  
+								<h3>Editor</h3>
+								<select class="col-sm-10" data-bind="value: Selected, select2: { }, options: Grupos, optionsText: 'Nome', optionsValue: 'Id'" ></select>
+
+								<div class="clearfix"></div>
+								<h3>Display</h3>
+								<select class="col-sm-10" data-bind="value: Selected, select2: { }, options: Grupos, optionsText: 'Nome', optionsValue: 'Id'" disabled="disabled"></select>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="public/components/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="public/components/bootstrap/dist/js/bootstrap.min.js"></script>  
+		<script type="text/javascript" src="public/components/knockoutjs/build/knockout-raw.js"></script>
+		<script type="text/javascript" src="public/components/knockout-mapping/build/output/knockout.mapping-latest.js"></script>
+		<script type="text/javascript" src="public/components/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="public/components/select2/select2.min.js"></script>
+		<script type="text/javascript" src="public/js/script.js"></script>
+	</div>	
+
+</body>
+</html>
